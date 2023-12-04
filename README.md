@@ -14,22 +14,11 @@ npm (Gerenciador de Pacotes do Node)
 
 Docker
 
-Executando a Aplicação
+CONTEÚDOS
+API com NodeJS, Typescript e MongoDB
 
+INFORMAÇÕES
+Acesso base de dados
 
-Para iniciar a aplicação, execute o seguinte comando no diretório raiz do projeto:
-
-
-
-bash
-
-
-Copy code
-
-
-docker-compose up
-
-
-Isso irá construir e iniciar os serviços frontend, backend e MongoDB.
-
-O frontend pode ser acessado em http://localhost:3000, e o backend está em execução em http://localhost:3001. O banco de dados MongoDB é acessível na porta 27017.
+DESCRIÇÃO
+Neste projeto desenvolva seu próprio encurtador de url a partir da construção de uma API com NodeJS, Typescript e MongoDB para a base de dados. Baseado no trabalho
