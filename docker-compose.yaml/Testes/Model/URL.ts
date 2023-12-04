@@ -1,19 +1,12 @@
-import { prop, getModelForClass, Ref } from '@typegoose/typegoose';
-import { User } from './User'; 
+const mongoose = require('mongoose');
 
-export class URL {
-  @prop({ required: true })
-  hash!: string;
+const urlSchema = new mongoose.Schema({
+  hash: { type: String, required: true },
+  originURL: { type: String, required: true },
+  shortURL: { type: String, required: true },
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+});
 
-  @prop({ required: true })
-  originURL!: string;
+const URLModel = mongoose.model('URL', urlSchema);
 
-  @prop({ required: true })
-  shortURL!: string;
-
-  
-  @prop({ ref: () => User, required: true })
-  createdBy!: Ref<User>;
-}
-
-export const URLModel = getModelForClass(URL);
+module.exports = URLModel;
